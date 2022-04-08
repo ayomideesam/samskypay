@@ -674,7 +674,6 @@ ol, ul {
   border-radius: 6px 6px 0 0;
   position: relative;
   -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
@@ -703,9 +702,6 @@ a.text-right {
   background-color: rgba(0, 146, 248, 0.49);
 }
 
-
-element.style {
-}
 .filter.filter-azure {
   background-color: rgba(0, 146, 248, 0.49);
 }
@@ -754,7 +750,7 @@ element.style {
 
 .accordion-button {
   font-size: 17px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.9);
   text-decoration: none;
   background: linear-gradient(rgb(1,149,255), rgb(2, 72, 122));
   width: 100%;
