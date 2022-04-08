@@ -541,11 +541,12 @@ ol, ul {
 .ratings1 {
   text-align: center;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.1;
+  /*line-height: 1.1;*/
   color: inherit;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 0 15px;
-  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .ratings1 small {
@@ -595,8 +596,18 @@ ol, ul {
 }
 
 .card-price .content {
-  min-height: 250px;
-  padding: 2em;
+  min-height: 200px;
+  padding: 1em 2em 0 2em;
+}
+
+.card-price .content p{
+  margin-top: 5px;
+}
+
+@media (min-width: 992px) {
+  .card-price .content p{
+    margin-top: 10px;
+  }
 }
 
 .card-price .footer {
@@ -727,41 +738,100 @@ element.style {
   filter: alpha(opacity=100);
 }
 
+/*...........*/
+
 .accordion-item {
-  background-color: #283042;
+  background: linear-gradient(rgb(1,149,255), rgb(2, 72, 122));
   border-radius: .4rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
+  margin-bottom: 3px;
+  padding: 0.2rem 0.5rem;
   box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
 }
 
-.accordion-link {
-  font-size: 1.6rem;
+.accordion-header button:focus {
+  outline: 0 !important;
+}
+
+.accordion-button {
+  font-size: 17px;
   color: rgba(255,255,255,0.8);
   text-decoration: none;
-  background-color: #283042;
+  background: linear-gradient(rgb(1,149,255), rgb(2, 72, 122));
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: .3rem 18px;
 }
 
-.accordion-link i {
+@media (min-width: 768px) {
+  .accordion-button {
+    font-size: 17px;
+    padding: 3px 18px;
+  }
+}
+
+.accordion-button i {
   color: #e7d5ff;
   padding: .5rem;
 }
 
-.accordion-link .ion-md-remove{
+.accordion-button .ion-md-shuffle{
   display: none;
 }
 
-.answer {
-  max-height: 0;
-  overflow: hidden;
-  position: relative;
+.navButton .ion-md-shuffle {
+  display: none;
 }
 
+.accordion-body {
+  max-height: 20rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #212838;
+  transition: max-height 650ms !important;
+  padding: 5px 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.accordion-body::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90%;
+  background-color: #8fc460;
+  border-radius: 10px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.accordion-body span {
+  color: rgba(255, 255, 255, .6);
+  font-size: 17px;
+  padding: .5rem 1.3rem;
+}
+
+.accordion-body span br {
+  content: "A" !important;
+  display: block !important;
+  margin-bottom: 0.5em !important;
+}
+
+.accordion-header:target .accordion-body {
+  /*max-height: 20rem;*/
+}
+
+.accordion-button:target .collapsed .ion-md-arrow-down {
+  display: none;
+}
+
+.accordion-button:target .collapsed .ion-md-shuffle{
+  display: block;
+}
+
+/*........*/
 /*........*/
   /**
    * Tailwind custom reset styles
@@ -1810,6 +1880,14 @@ select {
 .bg-blueGray-700 {
   --tw-bg-opacity: 1;
   background-color: rgba(51, 65, 85, var(--tw-bg-opacity));
+}
+
+.why-choose-nav {
+  background: linear-gradient(rgba(1,149,255,.3), rgba(2, 72, 122, .3));
+}
+
+.why-choose {
+  background: linear-gradient(rgb(1,149,255), rgb(2, 72, 122));
 }
 
 .bg-blueGray-800 {
@@ -3549,6 +3627,7 @@ select {
 
 .fill-current {
   fill: currentColor;
+  color: rgb(1,149,255);
 }
 
 .table-auto {
@@ -4163,13 +4242,21 @@ select {
 
 }
 
+@media (max-width: 375px) {
+  .reactImg {
+    padding-top: 6.7rem;
+  }
+}
+
+
+
 @media (min-width: 319px) {
   .pt-32 {
     padding-top: 0;
   }
 
   .px-12 {
-    padding-left: 3rem;
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -4184,7 +4271,7 @@ select {
   }
 
   .px-12 {
-    padding-left: 3rem;
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 

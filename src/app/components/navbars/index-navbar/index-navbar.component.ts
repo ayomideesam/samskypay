@@ -6,6 +6,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class IndexNavbarComponent implements OnInit {
   navbarOpen = false;
+  toggle:boolean = true;
 
   constructor() {}
 
@@ -13,5 +14,6 @@ export class IndexNavbarComponent implements OnInit {
 
   setNavbarOpen() {
     this.navbarOpen = !this.navbarOpen;
+    this.toggle = !this.toggle;
   }
 }

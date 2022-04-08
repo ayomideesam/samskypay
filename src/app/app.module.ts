@@ -36,12 +36,15 @@ import {IndexNavbarComponent} from './components/navbars/index-navbar/index-navb
 // import { PagesDropdownComponent } from './components/dropdowns/pages-dropdown/pages-dropdown.component';
 // import { NotificationDropdownComponent } from './components/dropdowns/notification-dropdown/notification-dropdown.component';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
+// components for views and layouts
+// import { UserDropdownComponent } from './components/dropdowns/user-dropdown/user-dropdown.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+import {NgbdAccordionConfig} from './accordion-config';
+
 /*import { MapsComponent } from './views/admin/maps/maps.component';
 import { SettingsComponent } from './views/admin/settings/settings.component';
 import { TablesComponent } from './views/admin/tables/tables.component';*/
-
-// components for views and layouts
-// import { UserDropdownComponent } from './components/dropdowns/user-dropdown/user-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -79,9 +82,11 @@ import { TablesComponent } from './views/admin/tables/tables.component';*/
     IndexComponent,
     LandingComponent,
     ProfileComponent,
+    NgbdAccordionConfig
   ],
-  imports: [AppRoutingModule, BrowserModule],
+  imports: [AppRoutingModule, BrowserModule, NgbModule],
   providers: [],
+  exports: [NgbdAccordionConfig],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

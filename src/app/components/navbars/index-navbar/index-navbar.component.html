@@ -1,17 +1,20 @@
-<nav class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
+<nav
+  class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow why-choose jss10">
   <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-    <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+    <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start navDiv">
       <a [routerLink]="['/']"
-         class="text-blueGray-700 text-sm font-bold leading-relaxed inline-block py-2 whitespace-nowrap uppercase">
+         class="text-black text-sm font-bold leading-relaxed inline-block py-2 whitespace-nowrap uppercase">
         <img src="../../../../assets/img/logo.png" alt="" class="indexnavbarlogo">
       </a>
-      <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" (click)="setNavbarOpen()">
-        <i class="fas fa-bars"></i>
+      <button
+        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none navButton" type="button" (click)="setNavbarOpen()">
+        <i [ngClass]="{'fas fa-bars': toggle}"></i>
+        <i [ngClass]="{'fas fa-times': !toggle}"></i>
       </button>
     </div>
     <div class="lg:flex flex-grow items-center" [ngClass]="{ hidden: !navbarOpen, block: navbarOpen }" id="example-navbar-warning">
       <ul class="flex flex-col lg:flex-row list-none mr-auto docsul">
-        <li class="flex items-center">
+        <li class="flex items-center px-3 text-white">
           <!--<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://www.creative-tim.com/learning-lab/tailwind/angular/overview/notus?ref=na-index-navbar">
             <i class="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2"></i>
             Docs
@@ -26,32 +29,32 @@
         </li>
         <li class="flex items-center">
           <a
-            class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+            class="hover:text-blueGray-500 text-white px-3 py-2 flex items-center text-xs uppercase font-bold"
             [routerLink]="['/']">
             About Us
           </a>
         </li>
         <li class="flex items-center">
           <a
-            class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+            class="hover:text-blueGray-500 text-white px-3 py-2 flex items-center text-xs uppercase font-bold"
             [routerLink]="['/']">
             How It Works
           </a>
         </li>
         <li class="flex items-center">
           <a
-            class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
+            class="hover:text-blueGray-500 text-white px-3 py-2 flex items-center text-xs uppercase font-bold"
             [routerLink]="['/']">
             Careers
           </a>
         </li>
         <li class="flex items-center">
-          <a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" [routerLink]="['/']">
+          <a class="hover:text-blueGray-500 text-white px-3 py-2 flex items-center text-xs uppercase font-bold" [routerLink]="['/']">
             Contact Us
           </a>
         </li>
         <li class="flex items-center">
-          <a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://remit.by/samskypayonline">
+          <a class="hover:text-blueGray-500 text-white px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://remit.by/samskypayonline">
             LOGIN
           </a>
         </li>
